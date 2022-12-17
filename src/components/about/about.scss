@@ -1,0 +1,230 @@
+
+$green:#0eb582;
+$light-green:#f0fdfa;
+$light-color:#777;
+$light-white:#eee;
+$black:rgb(20, 20, 20);
+$white:#fff;
+$border:.1rem solid $green;
+$box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+
+@mixin grid($val) {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+   gap:2rem;
+}
+
+@mixin titleText($titleSize) {
+   font-size: $titleSize;
+   text-transform: capitalize;
+   color:$white ;
+}
+
+@mixin graphText($graphSize) {
+   font-size: $graphSize;
+   line-height: 2;
+   color:$light-color;
+}
+.heading-link{
+   text-align: center;
+   background-attachment: fixed;
+   background-position: center;
+   margin-top: 8rem;
+
+   h3{
+      @include titleText(4rem);
+   }
+   span{
+      background: #ff014f;
+      color:#fff;
+      display: inline-block;
+      height: 50px;
+      padding:1rem 3rem;
+      font-size: 2rem;
+      clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    }
+
+ }
+
+
+.aboutHome {
+  height: auto;
+}
+.aboutHome #heading {
+  text-align: left;
+  padding: 0;
+}
+.aboutHome .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aboutHome .right {
+  padding: 80px 50px;
+}
+.aboutHome .items {
+  margin-top: 50px;
+}
+.aboutHome .item {
+  background-color: #fff;
+  margin-top: 30px;
+  padding: 20px;
+  transition: 0.5s;
+}
+.aboutHome .img {
+  width: 200px;
+}
+.aboutHome img {
+  width: 70px;
+  height: 70px;
+}
+.aboutHome .item h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.aboutHome .item p {
+  color: #999999;
+}
+.aboutHome .item:hover {
+  background-color: #1eb2a6;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+}
+.aboutHome .item:hover p {
+  color: #fff;
+}
+/*----------awrapper------------*/
+.awrapper {
+  background-image: url("../../../public/images/awrapper.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  color: #fff;
+}
+.awrapper .box {
+  padding: 70px 0;
+}
+.awrapper img {
+  margin-right: 30px;
+}
+.awrapper h1 {
+  font-size: 50px;
+}
+.awrapper h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+/*----------awrapper------------*/
+@media screen and (max-width: 768px) {
+  .aboutHome .container {
+    flex-direction: column-reverse;
+  }
+  .aboutHome .row {
+    width: 100%;
+  }
+  .awrapper {
+    height: 50vh;
+  }
+}
+.btn_shadow {
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+}
+.coursess{
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  padding: 2rem;
+  margin: 1rem 3rem;
+.logo img{
+  width: 50px;
+}
+
+  .box-containers{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+
+     .boxs{
+      width: 400px;
+      background: linear-gradient(145deg, #e2e8ec, #ffffff);
+      box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+    
+
+
+
+     
+
+        &:hover .image img{
+           transform: scale(1.1);
+        }
+
+        &.hide{
+           display: none;
+        }
+
+        .image{
+           height: 20rem;
+           overflow: hidden;
+           position: relative;
+
+           img{
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+           }
+
+           h3{
+              @include titleText(1.5rem);
+              position: absolute;
+              top:1rem; left:1rem;
+              padding:.5rem 1.5rem;
+              color: black !important;
+              background-color: #fff;
+
+           }
+        }
+
+        .contents{
+           padding:2rem;
+           text-align: center;
+
+           h3{
+              @include titleText(2rem);
+           }
+
+           p{
+              padding:1rem 0;
+              @include graphText(1.6rem);
+              color: #ff014f;
+           }
+
+           .icons{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: 2rem;
+              padding-top: 2rem;
+
+              span{
+                 @include titleText(1.5rem);
+                 color: black;
+
+                 i{
+                    color:#ff014f;
+                    padding-right: .5rem;
+                 }
+              }
+           }
+        }
+     }
+  }
+
+  .load-more{
+     margin-top: 2rem;
+     text-align: center;
+  }
+}
