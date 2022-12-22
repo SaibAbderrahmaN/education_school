@@ -11,18 +11,18 @@ const Header = () => {
       <Head />
       <header>
         <nav className='flexSB'>
-          <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
+          <ul  className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
             <li>
-              <Link to='/'>الصفحة الرئسية</Link>
+              <Link style={{fontWeight:"900"}} to='/'>الصفحة الرئسية</Link>
             </li>
             <li>
-              <Link to='/courses'>دروس</Link>
+              <Link style={{fontWeight:"900"}} to='/courses'>دروس</Link>
             </li>
             <li>
-              <Link to='/about'>واجبات </Link>
+              <Link style={{fontWeight:"900"}} to='/about'>واجبات </Link>
             </li>
             <li>
-              <Link to='/contact'>إتصل بنا</Link>
+              <Link style={{fontWeight:"900"}} to='/contact'>إتصل بنا</Link>
             </li>
           </ul>
           <div className='start'>

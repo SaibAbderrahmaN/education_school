@@ -228,3 +228,11 @@ $box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
      text-align: center;
   }
 }
+
+
+@media (max-width:500px) {
+  .aboutHome .right {
+    padding:30px 20px;
+  }
+  
+}
